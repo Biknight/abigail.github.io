@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+<style>
+
+ul {
+				list-style-type: none;
+				background-color: #074F57;
+				overflow: hidden;
+				margin: 0px;
+				padding: 0px;
+}	
+
+li {
+				float: left;
+				padding: 14px 30px;
+				width: 150px;
+				font-size: 15pt;
+}
+
+li a{
+					color: white;
+					text-align: center;
+					display: block;
+					text-decoration: none;
+					letter-spacing: 2px;
+					font-family: fantasy;
+}
+
+li:hover{
+									background-color: #82FFC7;
+}
+
+.content h1 {
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #75b2ac;
+  margin: 60px 0 0 0;
+}
+.content h2 {
+  text-align: center;
+  color: #75b2ac;
+  margin: 0px 0 70px 0;
+}
+
+.quote{
+	text-align: center;
+	background-color: #4e8087;
+	height: 200px;
+	padding-bottom: 50px;
+}
+
+.quote h3{
+	padding-top: 100px;
+}
+
+.footer{
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	padding:  64px 16px 64px 16px;
+}
+
+.footer i{
+	color: white;
+}	
+
+</style>
+
+
+</head>
+
+
+<body style="margin:0px">
+<ul>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="profile.html">Profile</a></li>
+	<li><a href="gallery.html">Gallery</a></li>
+	<li><a href="random.html">Random Thoughts</a></li>
+</ul>
+
+<section>
+		<img class="MySlides" src="bluebg.jpg" height='600'	 style="width:100%">
+		<img class="MySlides" src="flower.jpg" height='600' style="width:100%">
+		<img class="MySlides" src="concert.jpg" height='600' style="width:100%">
+</section>
+
+<section class="content">
+		<h1>Abigail's Website</h1>
+		<h2><i>I love my dog -- BAMBI</h2>
+		<img src="dog.jpg" style="height:200px; width:200px; display: block; margin: 0px auto 10px auto; padding-bottom: 50px;">
+
+</section>
+
+<section class="quote">
+		<h3>It's not about who's real to your face, it's about who stays real behind your back.</h3>
+		<h4><i>~Laurie Kaiser</i></h4>
+
+</section>
+
+<footer class="footer">
+	<a href="http:/www.facebook.com"><i class="fa fa-facebook-official"></i></a>
+	<a href="http:/www.pinterest.com"><i class="fa fa-pinterest-p"></i></a>
+	<a href="http://www.twiter.com"><i class="fa fa-twitter"></i></a>
+	<a href="http://www.youtube.com"><i class="fa fa-youtube"></i></a>
+	<a href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a>
+	<p>
+	 Powered by Abigail</p>
+
+	 </footer>
+
+
+<script>
+	
+var myIndex = 0;
+carousel();
+
+function carousel() {
+	var i;
+	var x = document.getElementsByClassName("MySlides")
+	for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";
+	}
+
+		myIndex++;
+
+		if (myIndex > x.length) {myIndex = 1}
+		x[myIndex-1].style.display = "block";
+		setTimeout(carousel, 3000)
+}
+</script>
+
+</body>
+
+</html>
